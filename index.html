@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">   
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://kit.fontawesome.com/c8a00ac58b.js" defer crossorigin="anonymous"></script>
+        <script src="./http.js" defer></script>
+        <script src="./contact.js" defer></script>
+        <script src="./Validation.js/validationCreate.js" defer></script>
+        <script src="./Validation.js/validationEdit.js" defer></script>
+        <script src="./app.js" defer></script>   
+        <title>ContactList</title>     
+    </head>
+    <body>         
+        <div class="container">
+            <div class="create_container">
+                <div class="input_create_container">
+                    <div class="input_create_box">
+                        <input type="text" class="input_create" placeholder="First Name" id="create_first_name" maxlength="12">
+                        <div class="error" id="err_cr_MSG_FN"></div>
+                    </div>
+                    <div class="input_create_box">
+                        <input type="text" class="input_create" placeholder="Last Name" id="create_last_name" maxlength="12">
+                        <div class="error" id="err_cr_MSG_LN"></div>
+                    </div>
+                    <div class="input_create_box">
+                        <input type="text" class="input_create" placeholder="Phone Number" id="create_phone">
+                        <div class="error" id="err_cr_MSG_PN"></div>
+                    </div>
+                </div>
+                <button id="button_create">Add Contact</button>
+            </div> 
+            <div class="contacts_container">
+                <div class="contact_List"></div>                
+                <div class="edit_container">
+                    <h1>Edit Contact</h1>
+                    <div class="edit_contact_box">                        
+                        <div class="edit_icon"><img src="./icons/avatar.svg" alt=""></div>   
+                        <div class="error_box">
+                            <div class="error_edit" id="err_edit_MSG_FN"></div> 
+                            <div class="error_edit" id="err_edit_MSG_LN"></div> 
+                            <div class="error_edit" id="err_edit_MSG_PN"></div>
+                        </div>                        
+                        <div class="input_edit_box">
+                            <input type="text" class="input_edit edit_first_name" placeholder="First Name" id="edit_first_name" maxlength="12">
+                            <input type="text" class="input_edit edit_last_name" placeholder="Last Name" id="edit_last_name" maxlength="12">
+                            <input type="text" class="input_edit edit_phone" placeholder="Phone Number" id="edit_phone">                           
+                        </div> 
+                        <button id="button_edit" class="save">Save Contact</button>                                   
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </body>
+</html>
